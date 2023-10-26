@@ -13,12 +13,13 @@ const oAuth2Client = new google.auth.OAuth2(
 
 export async function getCalendarEvents(accessToken: string): Promise<CalendarEvent[] | undefined> {
   try {
-
+    // OAuthクライアントに アクセストークンを付与して取得する
     oAuth2Client.setCredentials({ access_token: accessToken });
     const calendar = google.calendar({ version: 'v3', auth: oAuth2Client });
     const now = new Date();
     const nextWeek = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
 
+    // どんな条件で取得するかのオプション
     const response = await calendar.events.list({
       calendarId: 'primary',
       timeMin: now.toISOString(),

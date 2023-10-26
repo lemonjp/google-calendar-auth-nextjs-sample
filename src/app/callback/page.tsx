@@ -31,6 +31,7 @@ export default function CallBack() {
 
     if(!hasCode) return
 
+    // コールバックで戻されたURLのパラメータから認可コードを取得
     const authCode = searchParams.get('code')
 
     const getToken = async () => {

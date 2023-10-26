@@ -19,6 +19,7 @@ export const GoogleOAuth = () => {
         console.log("fetch ok");
       }
       const jsonData = await response.json();
+      // 取得したURLにアクセス
       location.href = jsonData.authorizeUrl
     }
 
