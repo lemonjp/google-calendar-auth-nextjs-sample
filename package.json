@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@google-cloud/local-auth": "2.1.0",
-    "googleapis": "105.0.0",
+    "googleapis": "128.0.0",
     "lodash": "4.17.21",
     "next": "13.5.6",
     "preline": "1.9.0",
